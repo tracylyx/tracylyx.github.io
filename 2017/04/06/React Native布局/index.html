@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>React Native布局 | tracy木子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native布局">
+<meta property="og:url" content="http://tracylyx.github.io/2017/04/06/React Native布局/index.html">
+<meta property="og:site_name" content="tracy木子">
+<meta property="og:description" content="最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。">
+<meta property="og:updated_time" content="2017-04-06T14:04:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native布局">
+<meta name="twitter:description" content="最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。">
+  
+    <link rel="alternate" href="/atom.xml" title="tracy木子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">tracy木子</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">博客小站</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracylyx.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="react-React Native布局" class="article article-type-react" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/06/React Native布局/" class="article-date">
+  <time datetime="2017-04-06T07:24:39.000Z" itemprop="datePublished">2017-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React Native布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。<br>自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。</p>
+<a id="more"></a>
+<p>总结一点：凡事做任何需求，都需要在前期把这个需求可能会遇到的情况、需要的资源等方方面面思考个透，否则就是后期大量的修修补补。</p>
+<h4 id="RN中的样式"><a href="#RN中的样式" class="headerlink" title="RN中的样式"></a>RN中的样式</h4><p>RN中的样式是一个CSS子集，但是有扩展也有舍弃，例如下边的组合<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">margin-top</span> <span class="selector-tag">margin-bottom</span> </div><div class="line"><span class="selector-tag">marginVertival</span></div><div class="line"></div><div class="line"><span class="selector-tag">margin-left</span> <span class="selector-tag">margin-right</span></div><div class="line"><span class="selector-tag">marginHorizontal</span></div></pre></td></tr></table></figure></p>
+<p>遵循web上CSS命名与写法，但命名形式上可能略有差异（复合属性名需要使用驼峰写法）</p>
+<p>无单位，用来表示与设备像素密度无关的逻辑像素点</p>
+<p>父组件的样式不会影响子组建，但是在<text></text>中这句话不适用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;&#123;color:</span> <span class="attr">red</span>&#125;&#125;&gt;</span></div><div class="line">	我显示红色</div><div class="line">	<span class="tag">&lt;<span class="name">Text</span>&gt;</span></div><div class="line">		哈哈，我也显示红色</div><div class="line">	<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;&#123;color:</span> <span class="attr">pink</span>&#125;&#125;&gt;</span></div><div class="line">		我是粉色、我是粉色</div><div class="line">	<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="RN中的flex布局"><a href="#RN中的flex布局" class="headerlink" title="RN中的flex布局"></a>RN中的flex布局</h4><h5 id="简单概念描述"><a href="#简单概念描述" class="headerlink" title="简单概念描述"></a>简单概念描述</h5><p>flex布局中有主轴、交叉轴、容器、项目这些名词。</p>
+<p>主轴、交叉轴是相对的，在RN下，默认垂直方向为主轴，从而可知水平方向为交叉轴。</p>
+<p>容器：设定flex属性的元素。</p>
+<p>项目：被容器包裹的元素。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>水平</th>
+<th>垂直</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RN默认</td>
+<td>交叉轴</td>
+<td>主轴</td>
+</tr>
+<tr>
+<td>flexBox布局</td>
+<td>主轴</td>
+<td>交叉轴</td>
+</tr>
+</tbody>
+</table>
+<h5 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h5><ul>
+<li><p>flexDirection 决定主轴的方向，即项目的排列方向</p>
+<ul>
+<li><p>row：默认值，主轴为水平方向，由左至右</p>
+</li>
+<li><p>row-reverse：主轴为水平方向，由右至左</p>
+</li>
+<li><p>column：主轴为垂直方向，由上至下</p>
+</li>
+<li>column-reverse：主轴为垂直方向，由下至上</li>
+</ul>
+</li>
+<li><p>flexWrap 用来定义项目在一行中显示的处理方式</p>
+<ul>
+<li>nowrap：默认值，不换行，超过部分会被遮挡</li>
+<li>wrap：换行，超过部分这行从左至右显示</li>
+<li>wrap-reverse：换行，展示由下至上 从左至右展示</li>
+</ul>
+</li>
+<li><p>justifyContent 定义项目在<strong>主轴</strong>上的对齐方式，与轴的方向有关，假设主轴从左至右</p>
+<ul>
+<li>flex-start：默认值，左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center：居中</li>
+<li>space-between：两端对齐，项目之间的间隔相等</li>
+<li>space-around；每个项目两侧的间隔相等。所以项目之间的间隔比项目与边框的间隔大一倍</li>
+</ul>
+</li>
+<li><p>alignItems 定义项目在交叉轴上的对齐方式，与交叉轴的方向有关，假设交叉轴从上到下</p>
+<ul>
+<li>flex-start：交叉轴的起点对齐</li>
+<li>flex-end：交叉轴的终点对齐</li>
+<li>center：交叉轴的中点对齐</li>
+<li>baseline：项目的第一行文字的基线对齐</li>
+<li>stretch：默认值，如果项目未设置高度或者为auto，将沾满整个容器的高度</li>
+</ul>
+</li>
+</ul>
+<h5 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h5><p>TODO</p>
+<h4 id="RN开发中遇到的问题集合"><a href="#RN开发中遇到的问题集合" class="headerlink" title="RN开发中遇到的问题集合"></a>RN开发中遇到的问题集合</h4><ul>
+<li><p>组件名字首字母一定要大写</p>
+</li>
+<li><p>return 中只能包含一个标签，否则报错</p>
+</li>
+<li><p>justifyContent alignItems 是容器的属性，因此设置只对父元素其效果，用于界定子组件的位置。</p>
+</li>
+<li><p>flex: 1; 用来确保内容撑满当前容器</p>
+</li>
+<li><p>实现文本溢出展示…的前提需要设定容器的宽度，否则无效</p>
+</li>
+<li><p>无法使用borderStyle: ‘dashed’ 设置某一边的样式，但是设置solid可以</p>
+</li>
+</ul>
+<p>【推荐阅读】<br>flex 语法：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool</a></p>
+<p>flex 实战：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>RN样式指南：<a href="https://github.com/doyoe/react-native-stylesheet-guide" target="_blank" rel="external">https://github.com/doyoe/react-native-stylesheet-guide</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracylyx.github.io/2017/04/06/React Native布局/" data-id="cj16h2te70005jsuj60en15i5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/">ReactNative</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/29/如何将md文件保存为PDF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">md文件和PDF</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/06/React Native布局/">React Native布局</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/29/如何将md文件保存为PDF/">md文件和PDF</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/22/canvas学习笔记/">canvas学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/03/JavaScript中的错误处理/">JavaScript中的错误处理</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/26/使用hexo搭建博客简单教程/">使用hexo搭建博客简单教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
