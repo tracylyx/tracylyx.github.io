@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracylyx.github.io/2017/04/06/React Native布局/index.html">
 <meta property="og:site_name" content="tracy木子">
 <meta property="og:description" content="最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。">
-<meta property="og:updated_time" content="2017-04-06T14:04:00.000Z">
+<meta property="og:updated_time" content="2017-04-07T06:21:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native布局">
 <meta name="twitter:description" content="最近做的一个项目，使用的是RN，我在项目中主要负责卡片的绘制。这就涉及到和样式、flex布局相关的内容，看似容易，当时对于好久好久好久没写样式的我来说，还是稍稍有些困难哒。自己给自己挖了好多坑，例如，没有提前认认真真的思考过内部布局就开始绘制，导致后边在app中跑的时候，有些乱。">
@@ -56,9 +56,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracylyx.github.io"></form>
@@ -159,7 +159,8 @@
 </ul>
 </li>
 </ul>
-<h5 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h5><p>TODO</p>
+<h5 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h5><h4 id="RN中的写法"><a href="#RN中的写法" class="headerlink" title="RN中的写法"></a>RN中的写法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 新增一个组件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</div><div class="line">	render() &#123;</div><div class="line">		<span class="keyword">return</span> (</div><div class="line">			<span class="xml"><span class="tag">&lt;<span class="name">View</span>&gt;</span></span></div><div class="line">				<span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;[styles.word,</span> &#123;<span class="attr">lineHeight:</span> <span class="attr">10</span>&#125;]&#125;&gt;</span>hello world<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">View</span>&gt;</span></div><div class="line">		)</div><div class="line">	&#125;	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> styles = StyleSheet.create(&#123;</div><div class="line">	<span class="attr">word</span>: &#123;</div><div class="line">		<span class="attr">fontSize</span>: <span class="number">18</span>,</div><div class="line">		<span class="attr">color</span>: <span class="string">'red'</span></div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>TODO</p>
 <h4 id="RN开发中遇到的问题集合"><a href="#RN开发中遇到的问题集合" class="headerlink" title="RN开发中遇到的问题集合"></a>RN开发中遇到的问题集合</h4><ul>
 <li><p>组件名字首字母一定要大写</p>
 </li>
@@ -181,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracylyx.github.io/2017/04/06/React Native布局/" data-id="cj16h2te70005jsuj60en15i5" class="article-share-link">Share</a>
+      <a data-url="http://tracylyx.github.io/2017/04/06/React Native布局/" data-id="cj16h2te70005jsuj60en15i5" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactNative/">ReactNative</a></li></ul>
@@ -194,7 +195,7 @@
   
   
     <a href="/2016/12/29/如何将md文件保存为PDF/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">md文件和PDF</div>
     </a>
   
@@ -212,7 +213,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
     </div>
@@ -222,7 +223,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
@@ -241,7 +242,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -278,7 +279,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
