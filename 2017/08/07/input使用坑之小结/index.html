@@ -3,14 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/4 | tracy木子</title>
+  <title>input使用坑之小结 | tracy木子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tracy木子">
-<meta property="og:url" content="http://tracylyx.github.io/archives/2017/04/index.html">
+  <meta name="description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
+<meta property="og:type" content="article">
+<meta property="og:title" content="input使用坑之小结">
+<meta property="og:url" content="http://tracylyx.github.io/2017/08/07/input使用坑之小结/index.html">
 <meta property="og:site_name" content="tracy木子">
+<meta property="og:description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
+<meta property="og:updated_time" content="2017-08-07T13:12:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracy木子">
+<meta name="twitter:title" content="input使用坑之小结">
+<meta name="twitter:description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
   
     <link rel="alternate" href="/atom.xml" title="tracy木子" type="application/atom+xml">
   
@@ -63,134 +82,60 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/22/Router学习笔记/" class="archive-article-date">
-  <time datetime="2017-04-22T02:31:08.000Z" itemprop="datePublished">Apr 22</time>
+        <section id="main"><article id="post-input使用坑之小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/input使用坑之小结/" class="article-date">
+  <time datetime="2017-08-07T13:05:25.000Z" itemprop="datePublished">2017-08-07</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/22/Router学习笔记/">Router学习笔记</a>
+    <h1 class="article-title" itemprop="name">
+      input使用坑之小结
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/19/在mac上安装mongoDB/" class="archive-article-date">
-  <time datetime="2017-04-19T01:46:43.000Z" itemprop="datePublished">Apr 19</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/19/在mac上安装mongoDB/">在mac上安装mongoDB</a>
-    </h1>
-  
+        <p>最近在项目中使用一个标签，input。</p>
+<p>小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。</p>
+<p>举个例子：</p>
+<p>jq 或者 zepto 前提下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inputBox"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请把光标聚焦到我..."</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#inputBox'</span>).focus(); <span class="comment">// 告诉你，无效！！！！</span></div><div class="line">$(<span class="string">'input'</span>)[<span class="number">0</span>].focus(); <span class="comment">// 正常聚焦到此input身上</span></div></pre></td></tr></table></figure>
+<p>丫丫的，真是傲娇啊！折腾了我一个晚上。算了，怪我太弱……</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/18/gulp插件之gulp-less/" class="archive-article-date">
-  <time datetime="2017-04-18T02:13:23.000Z" itemprop="datePublished">Apr 18</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/gulp插件之gulp-less/">gulp插件之gulp-less</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/15/带你React入门/" class="archive-article-date">
-  <time datetime="2017-04-15T14:02:02.000Z" itemprop="datePublished">Apr 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracylyx.github.io/2017/08/07/input使用坑之小结/" data-id="cj626dard000j8pujvzljh0mc" class="article-share-link">Partager</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/15/带你React入门/">带你React入门</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/08/npm相关笔记/" class="archive-article-date">
-  <time datetime="2017-04-08T14:33:29.000Z" itemprop="datePublished">Apr 8</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/npm相关笔记/">npm相关笔记</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/踩过的坑/">踩过的坑</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-react">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/06/React Native布局/" class="archive-article-date">
-  <time datetime="2017-04-06T07:24:39.000Z" itemprop="datePublished">Apr 6</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/06/React Native布局/">React Native布局</a>
-    </h1>
   
+    <a href="/2017/08/07/冒冒失失/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">冒冒失失</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
