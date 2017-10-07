@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracylyx.github.io/2017/10/07/UML类图相关基础知识点/index.html">
 <meta property="og:site_name" content="tracy木子">
 <meta property="og:description" content="认真接触的类图的原因项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～">
-<meta property="og:updated_time" content="2017-10-07T13:40:19.000Z">
+<meta property="og:updated_time" content="2017-10-07T13:44:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML类图相关基础知识点">
 <meta name="twitter:description" content="认真接触的类图的原因项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～">
@@ -58,7 +58,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracylyx.github.io"></form>
@@ -89,8 +89,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="认真接触的类图的原因"><a href="#认真接触的类图的原因" class="headerlink" title="认真接触的类图的原因"></a>认真接触的类图的原因</h3><h4 id="项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～"><a href="#项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～" class="headerlink" title="项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～"></a>项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～</h4><a id="more"></a>
-<h3 id="UML是什么"><a href="#UML是什么" class="headerlink" title="UML是什么"></a>UML是什么</h3><h4 id="统一建模语言"><a href="#统一建模语言" class="headerlink" title="统一建模语言"></a>统一建模语言</h4><h3 id="为什么需要类图"><a href="#为什么需要类图" class="headerlink" title="为什么需要类图"></a>为什么需要类图</h3><h4 id="在对业务一无所知的情况下，需要理清楚业务概念以及他们之间的关系。通过类图，可以深入剖析系统业务。"><a href="#在对业务一无所知的情况下，需要理清楚业务概念以及他们之间的关系。通过类图，可以深入剖析系统业务。" class="headerlink" title="在对业务一无所知的情况下，需要理清楚业务概念以及他们之间的关系。通过类图，可以深入剖析系统业务。"></a>在对业务一无所知的情况下，需要理清楚业务概念以及他们之间的关系。通过类图，可以深入剖析系统业务。</h4><h4 id="面向对象编程中，类是对现实世界中一组具有相同特征的物体的抽象，通过类图进行抽象。"><a href="#面向对象编程中，类是对现实世界中一组具有相同特征的物体的抽象，通过类图进行抽象。" class="headerlink" title="面向对象编程中，类是对现实世界中一组具有相同特征的物体的抽象，通过类图进行抽象。"></a>面向对象编程中，类是对现实世界中一组具有相同特征的物体的抽象，通过类图进行抽象。</h4><h4 id="概念解释"><a href="#概念解释" class="headerlink" title="概念解释"></a>概念解释</h4><h4 id="软件分析-与-设计-是编码前的两个步骤，分析仅与业务有关，与技术无关；设计以分析为基础，主要与具体技术有关。"><a href="#软件分析-与-设计-是编码前的两个步骤，分析仅与业务有关，与技术无关；设计以分析为基础，主要与具体技术有关。" class="headerlink" title="软件分析 与 设计 是编码前的两个步骤，分析仅与业务有关，与技术无关；设计以分析为基础，主要与具体技术有关。"></a><strong>软件分析</strong> 与 <strong>设计</strong> 是编码前的两个步骤，分析仅与业务有关，与技术无关；设计以分析为基础，主要与具体技术有关。</h4><h4 id="类：在面向对象中，是对现实世界中一组具有相同特征的物体的抽象"><a href="#类：在面向对象中，是对现实世界中一组具有相同特征的物体的抽象" class="headerlink" title="类：在面向对象中，是对现实世界中一组具有相同特征的物体的抽象"></a>类：在面向对象中，是对现实世界中一组具有相同特征的物体的抽象</h4><h4 id="接口：一种特殊的类，具有类的结构但是不可被实例化，只可以被实现（继承）"><a href="#接口：一种特殊的类，具有类的结构但是不可被实例化，只可以被实现（继承）" class="headerlink" title="接口：一种特殊的类，具有类的结构但是不可被实例化，只可以被实现（继承）"></a>接口：一种特殊的类，具有类的结构但是不可被实例化，只可以被实现（继承）</h4><h4 id="类图中的集中关系："><a href="#类图中的集中关系：" class="headerlink" title="类图中的集中关系："></a>类图中的集中关系：</h4><ul>
+        <h3 id="认真接触的类图的原因"><a href="#认真接触的类图的原因" class="headerlink" title="认真接触的类图的原因"></a>认真接触的类图的原因</h3><p>项目需要重构，领导是做后端开发出身，所以建议在做大的改动或是项目的时候，需要绘制下类图，理清各个势力之间的关系。so…我就开始看大学没怎么学的UML之类图啦～</p>
+<a id="more"></a>
+<h3 id="UML是什么"><a href="#UML是什么" class="headerlink" title="UML是什么"></a>UML是什么</h3><p>统一建模语言</p>
+<h3 id="为什么需要类图"><a href="#为什么需要类图" class="headerlink" title="为什么需要类图"></a>为什么需要类图</h3><p>在对业务一无所知的情况下，需要理清楚业务概念以及他们之间的关系。通过类图，可以深入剖析系统业务。</p>
+<p>面向对象编程中，类是对现实世界中一组具有相同特征的物体的抽象，通过类图进行抽象。</p>
+<h3 id="概念解释"><a href="#概念解释" class="headerlink" title="概念解释"></a>概念解释</h3><p><strong>软件分析</strong> 与 <strong>设计</strong> 是编码前的两个步骤，分析仅与业务有关，与技术无关；设计以分析为基础，主要与具体技术有关。</p>
+<p>类：在面向对象中，是对现实世界中一组具有相同特征的物体的抽象<br>接口：一种特殊的类，具有类的结构但是不可被实例化，只可以被实现（继承）</p>
+<p>类图中的集中关系：</p>
+<ul>
 <li>泛化</li>
 <li>实现</li>
 <li>关联</li>
@@ -98,7 +105,8 @@
 <li>聚合</li>
 <li>组合</li>
 </ul>
-<h3 id="各个关系的解释"><a href="#各个关系的解释" class="headerlink" title="各个关系的解释"></a>各个关系的解释</h3><h4 id="各种关系的强弱关系"><a href="#各种关系的强弱关系" class="headerlink" title="各种关系的强弱关系"></a>各种关系的强弱关系</h4><ul>
+<h3 id="各个关系的解释"><a href="#各个关系的解释" class="headerlink" title="各个关系的解释"></a>各个关系的解释</h3><p>各种关系的强弱关系</p>
+<ul>
 <li>泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖</li>
 </ul>
 <h4 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h4><ul>
@@ -131,14 +139,19 @@
 <li>空心菱形、实线</li>
 <li>举个栗子：即使没有班级，但依旧存在学生</li>
 </ul>
-<h3 id="自我总结"><a href="#自我总结" class="headerlink" title="自我总结"></a>自我总结</h3><h4 id="在实际运用中要在一张白纸上绘出项目的类图，对我来说还是挺难的，但是，没画一次，领导都会认真的给出点评、建议，从中改进不少。绘制完类图到编码结束，感觉轻松不少，很多地方都解耦开来了，因此先开发谁、后开发谁都无所谓。"><a href="#在实际运用中要在一张白纸上绘出项目的类图，对我来说还是挺难的，但是，没画一次，领导都会认真的给出点评、建议，从中改进不少。绘制完类图到编码结束，感觉轻松不少，很多地方都解耦开来了，因此先开发谁、后开发谁都无所谓。" class="headerlink" title="在实际运用中要在一张白纸上绘出项目的类图，对我来说还是挺难的，但是，没画一次，领导都会认真的给出点评、建议，从中改进不少。绘制完类图到编码结束，感觉轻松不少，很多地方都解耦开来了，因此先开发谁、后开发谁都无所谓。"></a>在实际运用中要在一张白纸上绘出项目的类图，对我来说还是挺难的，但是，没画一次，领导都会认真的给出点评、建议，从中改进不少。绘制完类图到编码结束，感觉轻松不少，很多地方都解耦开来了，因此先开发谁、后开发谁都无所谓。</h4><h4 id="但是，发现在具体的交互上，还是出了很多乱子，整体编码结束，自测的时候，时间都花在了具体的交互问题修复。浪费了非常多的时间，无比心疼。"><a href="#但是，发现在具体的交互上，还是出了很多乱子，整体编码结束，自测的时候，时间都花在了具体的交互问题修复。浪费了非常多的时间，无比心疼。" class="headerlink" title="但是，发现在具体的交互上，还是出了很多乱子，整体编码结束，自测的时候，时间都花在了具体的交互问题修复。浪费了非常多的时间，无比心疼。"></a>但是，发现在具体的交互上，还是出了很多乱子，整体编码结束，自测的时候，时间都花在了具体的交互问题修复。浪费了非常多的时间，无比心疼。</h4><h4 id="这里要TODO下，认真想想要这样改进……"><a href="#这里要TODO下，认真想想要这样改进……" class="headerlink" title="这里要TODO下，认真想想要这样改进……"></a>这里要TODO下，认真想想要这样改进……</h4><h3 id="参考文章及建议"><a href="#参考文章及建议" class="headerlink" title="参考文章及建议"></a>参考文章及建议</h3><h4 id="《详细UML图纸类图》：http-www-jianshu-com-p-4cd95d4ddb59"><a href="#《详细UML图纸类图》：http-www-jianshu-com-p-4cd95d4ddb59" class="headerlink" title="《详细UML图纸类图》：http://www.jianshu.com/p/4cd95d4ddb59"></a>《详细UML图纸类图》：<a href="http://www.jianshu.com/p/4cd95d4ddb59" target="_blank" rel="external">http://www.jianshu.com/p/4cd95d4ddb59</a></h4><h4 id="建议：动手画画简单的例子，从而加深对各个关系的理解。"><a href="#建议：动手画画简单的例子，从而加深对各个关系的理解。" class="headerlink" title="建议：动手画画简单的例子，从而加深对各个关系的理解。"></a>建议：动手画画简单的例子，从而加深对各个关系的理解。</h4>
+<h3 id="自我总结"><a href="#自我总结" class="headerlink" title="自我总结"></a>自我总结</h3><p>在实际运用中要在一张白纸上绘出项目的类图，对我来说还是挺难的，但是，没画一次，领导都会认真的给出点评、建议，从中改进不少。绘制完类图到编码结束，感觉轻松不少，很多地方都解耦开来了，因此先开发谁、后开发谁都无所谓。</p>
+<p>但是，发现在具体的交互上，还是出了很多乱子，整体编码结束，自测的时候，时间都花在了具体的交互问题修复。浪费了非常多的时间，无比心疼。</p>
+<p>这里要TODO下，认真想想要这样改进……</p>
+<h3 id="参考文章及建议"><a href="#参考文章及建议" class="headerlink" title="参考文章及建议"></a>参考文章及建议</h3><p>《详细UML图纸类图》：<a href="http://www.jianshu.com/p/4cd95d4ddb59" target="_blank" rel="external">http://www.jianshu.com/p/4cd95d4ddb59</a></p>
+<p>建议：动手画画简单的例子，从而加深对各个关系的理解。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracylyx.github.io/2017/10/07/UML类图相关基础知识点/" data-id="cj8hdbs29000h1aujfcm9ro6r" class="article-share-link">Delen</a>
+      <a data-url="http://tracylyx.github.io/2017/10/07/UML类图相关基础知识点/" data-id="cj8hdhdhz000h3bujkiyli3l0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类图-基础知识/">类图 基础知识</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础知识/">基础知识</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类图/">类图</a></li></ul>
 
     </footer>
   </div>
@@ -148,7 +161,7 @@
   
   
     <a href="/2017/08/07/input使用坑之小结/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">input使用坑之小结</div>
     </a>
   
@@ -166,9 +179,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Router/">Router</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/">mongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端构建工具/">前端构建工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/叽叽喳喳/">叽叽喳喳</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/类图-基础知识/">类图 基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/踩过的坑/">踩过的坑</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReactNative/">ReactNative</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Router/">Router</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongoDB/">mongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端构建工具/">前端构建工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/叽叽喳喳/">叽叽喳喳</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础知识/">基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/类图/">类图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/踩过的坑/">踩过的坑</a></li></ul>
     </div>
   </div>
 
@@ -178,14 +191,14 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/Router/" style="font-size: 10px;">Router</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/前端构建工具/" style="font-size: 10px;">前端构建工具</a> <a href="/tags/叽叽喳喳/" style="font-size: 10px;">叽叽喳喳</a> <a href="/tags/类图-基础知识/" style="font-size: 10px;">类图 基础知识</a> <a href="/tags/踩过的坑/" style="font-size: 10px;">踩过的坑</a>
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/React/" style="font-size: 20px;">React</a> <a href="/tags/ReactNative/" style="font-size: 10px;">ReactNative</a> <a href="/tags/Router/" style="font-size: 10px;">Router</a> <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/mongoDB/" style="font-size: 10px;">mongoDB</a> <a href="/tags/前端构建工具/" style="font-size: 10px;">前端构建工具</a> <a href="/tags/叽叽喳喳/" style="font-size: 10px;">叽叽喳喳</a> <a href="/tags/基础知识/" style="font-size: 10px;">基础知识</a> <a href="/tags/类图/" style="font-size: 10px;">类图</a> <a href="/tags/踩过的坑/" style="font-size: 10px;">踩过的坑</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
     </div>
@@ -195,7 +208,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
