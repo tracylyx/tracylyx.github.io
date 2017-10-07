@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>带你React入门 | tracy木子</title>
+  <title>Label: 类图 基础知识 | tracy木子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学一个记一个，帮助自己也服务他人（假如文章有幸被正在准备学习React的同学看大的话～）。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="带你React入门">
-<meta property="og:url" content="http://tracylyx.github.io/2017/04/15/带你React入门/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="tracy木子">
+<meta property="og:url" content="http://tracylyx.github.io/tags/类图-基础知识/index.html">
 <meta property="og:site_name" content="tracy木子">
-<meta property="og:description" content="学一个记一个，帮助自己也服务他人（假如文章有幸被正在准备学习React的同学看大的话～）。">
-<meta property="og:updated_time" content="2017-04-15T14:29:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="带你React入门">
-<meta name="twitter:description" content="学一个记一个，帮助自己也服务他人（假如文章有幸被正在准备学习React的同学看大的话～）。">
+<meta name="twitter:title" content="tracy木子">
   
     <link rel="alternate" href="/atom.xml" title="tracy木子" type="application/atom+xml">
   
@@ -67,100 +63,39 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-带你React入门" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/15/带你React入门/" class="article-date">
-  <time datetime="2017-04-15T14:02:02.000Z" itemprop="datePublished">2017-04-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      带你React入门
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2017/10/07/UML类图相关基础知识点/" class="archive-article-date">
+  <time datetime="2017-10-07T12:55:19.000Z" itemprop="datePublished">Oct 7</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/07/UML类图相关基础知识点/">UML类图相关基础知识点</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>学一个记一个，帮助自己也服务他人<br>（假如文章有幸被正在准备学习React的同学看大的话～）。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><ul>
-<li>React 不是一个框架，它像是 MVC 中的V，用来高效处理 UI。</li>
-<li>React 可以看作是简单的 UI 状态机，当状态发生变化时，React 以最有效的方式更新 UI(kepp the interface up-to-data when the data changes)。</li>
-<li>React 有自己处理冒泡（bubble）和捕获（capture）的方式，确保事件对象（event）传递。</li>
-<li>在 React 中，标签具有 self-closing 属性，因此这样的<div> 等价于 <div></div></div></li>
-<li>key、ref、dangerouslySetInnerHTML 在 React 中特有</li>
-<li>不像其他构建web应用的框架，React 不使用模板，而是通过可用性强、灵活的组件创建页面。</li>
-</ul>
-<h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><ul>
-<li>js 的扩展，像 XML。</li>
-<li>可以使用在 React 中（在 React 中不是必须的，你完全可以<a href="http://reactjs.cn/react/docs/displaying-data.html" target="_blank" rel="external">使用原生 js</a> 是实现树状结构）</li>
-<li>在 JSX 中使用 if…else…结构的<a href="http://reactjs.cn/react/tips/if-else-in-JSX.html" target="_blank" rel="external">方式</a></li>
-</ul>
-<h3 id="组件-Component"><a href="#组件-Component" class="headerlink" title="组件 Component"></a>组件 Component</h3><ul>
-<li>写组件的核心思想：单一职责 single responsibility priciple</li>
-<li>组件，可用性强</li>
-<li>尽可能保持组件的无状态（无state）</li>
-<li>常用模式：<ul>
-<li>创建几个无状态的组件（仅用来渲染数据）</li>
-<li>通过一个有状态的组件包裹、管理</li>
-</ul>
-</li>
-<li>组件的优点：<ul>
-<li>使用 js 语言，灵活且强大</li>
-<li>易扩展和维护</li>
-<li>避免 xss 攻击</li>
-</ul>
-</li>
-</ul>
-<h3 id="props-VS-state"><a href="#props-VS-state" class="headerlink" title="props VS state"></a>props VS state</h3><ul>
-<li>props 当值设定后，在组件中就不可改变了。</li>
-<li>state 相应用户、服务请求、当发生改变时，state也跟着变化，然后通知到UI，从而做界面的更新。</li>
-</ul>
-<p>未完待更新…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tracylyx.github.io/2017/04/15/带你React入门/" data-id="cj8hdbs2400091aujxh34gtif" class="article-share-link">Delen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/04/18/gulp插件之gulp-less/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nieuwer</strong>
-      <div class="article-nav-title">
-        
-          gulp插件之gulp-less
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/04/08/npm相关笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">npm相关笔记</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
