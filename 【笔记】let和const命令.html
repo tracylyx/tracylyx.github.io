@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我需要给站点做SEO | tracy木子</title>
+  <title>【笔记】let和const命令 | tracy木子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SEOgoogle search console可以用来监控网站页面在搜索引擎（这里当然是Google）中的的显示效果并且了解用户是如何通过Google搜索来到你的网站的。类似于百度网站站长工具。
-百度站长google analytics网站分析工具。可以用来分析来到网站上的用户是谁，他们是从哪里来到网站的，来到网站之后干了下什么。类似于百度统计。">
+  <meta name="description" content="《ES6标准入门（第三版）》第二章 let和const命令，读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我需要给站点做SEO">
-<meta property="og:url" content="http://tracylyx.github.io/我需要给站点做SEO.html">
+<meta property="og:title" content="【笔记】let和const命令">
+<meta property="og:url" content="http://tracylyx.github.io/【笔记】let和const命令.html">
 <meta property="og:site_name" content="tracy木子">
-<meta property="og:description" content="SEOgoogle search console可以用来监控网站页面在搜索引擎（这里当然是Google）中的的显示效果并且了解用户是如何通过Google搜索来到你的网站的。类似于百度网站站长工具。
-百度站长google analytics网站分析工具。可以用来分析来到网站上的用户是谁，他们是从哪里来到网站的，来到网站之后干了下什么。类似于百度统计。">
-<meta property="og:updated_time" content="2017-10-19T10:14:17.000Z">
+<meta property="og:description" content="《ES6标准入门（第三版）》第二章 let和const命令，读书笔记">
+<meta property="og:updated_time" content="2017-10-19T14:04:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我需要给站点做SEO">
-<meta name="twitter:description" content="SEOgoogle search console可以用来监控网站页面在搜索引擎（这里当然是Google）中的的显示效果并且了解用户是如何通过Google搜索来到你的网站的。类似于百度网站站长工具。
-百度站长google analytics网站分析工具。可以用来分析来到网站上的用户是谁，他们是从哪里来到网站的，来到网站之后干了下什么。类似于百度统计。">
+<meta name="twitter:title" content="【笔记】let和const命令">
+<meta name="twitter:description" content="《ES6标准入门（第三版）》第二章 let和const命令，读书笔记">
   
     <link rel="alternate" href="/atom.xml" title="tracy木子" type="application/atom+xml">
   
@@ -70,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-我需要给站点做SEO" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【笔记】let和const命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/我需要给站点做SEO.html" class="article-date">
-  <time datetime="2017-10-19T10:10:54.000Z" itemprop="datePublished">2017-10-19</time>
+    <a href="/【笔记】let和const命令.html" class="article-date">
+  <time datetime="2017-10-19T13:51:52.000Z" itemprop="datePublished">2017-10-19</time>
 </a>
     
   </div>
@@ -84,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我需要给站点做SEO
+      【笔记】let和const命令
     </h1>
   
 
@@ -92,16 +89,73 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h3><h3 id="google-search-console"><a href="#google-search-console" class="headerlink" title="google search console"></a>google search console</h3><p>可以用来监控网站页面在搜索引擎（这里当然是Google）中的的显示效果并且了解用户是如何通过Google搜索来到你的网站的。类似于百度网站站长工具。</p>
-<h3 id="百度站长"><a href="#百度站长" class="headerlink" title="百度站长"></a>百度站长</h3><h3 id="google-analytics"><a href="#google-analytics" class="headerlink" title="google analytics"></a>google analytics</h3><p>网站分析工具。可以用来分析来到网站上的用户是谁，他们是从哪里来到网站的，来到网站之后干了下什么。类似于百度统计。</p>
+        <p>《ES6标准入门（第三版）》第二章 let和const命令，读书笔记<br><a id="more"></a></p>
+<h2 id="let、const命令"><a href="#let、const命令" class="headerlink" title="let、const命令"></a>let、const命令</h2><ul>
+<li>let声明的变量只在所在的代码块内有效</li>
+<li>const声明一个只读的常量。一旦声明，常量的值就不能改变。意味着，const一旦声明，就<strong>必须立即初始化</strong>，不赋值将会报错<ul>
+<li>本质：保证的并不是变量的值不得改动，而是变量指向的内存地址不能改动</li>
+</ul>
+</li>
+<li>let、const<strong>不存在变量提升</strong>。在声明之前使用，将会提示<code>ReferenceError</code></li>
+<li>let、const存在<strong>暂时性死区</strong>（TDZ），TDZ的本质：只要进入到当前作用域，所要使用的变量就已经存在，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量<ul>
+<li>只要块级作用域内存在let命令，他所声明的变量就“绑定”在这个区域内，从此不受外界的影响（即使这个变量之前被定义在全局中）</li>
+<li>存在暂时性死区，意味着使用<code>typeof</code>操作符将不能100%的保证是安全的操作。在死区范围内使用<code>typeof</code>将提示<code>ReferenceError</code></li>
+</ul>
+</li>
+<li>let不允许在相同作用域内<strong>重复声明</strong>同一个变量</li>
+</ul>
+<h2 id="ES6声明变量的6中方式"><a href="#ES6声明变量的6中方式" class="headerlink" title="ES6声明变量的6中方式"></a>ES6声明变量的6中方式</h2><ol>
+<li>var命令</li>
+<li>function命令</li>
+<li>let命令</li>
+<li>const命令</li>
+<li>import命令</li>
+<li>export命令</li>
+</ol>
+<h2 id="顶层对象"><a href="#顶层对象" class="headerlink" title="顶层对象"></a>顶层对象</h2><ul>
+<li>在浏览器中指的是<code>window</code>对象，在ES5中，顶层对象的属性与全局变量是等价的</li>
+<li>在Node环境中指的是<code>global</code>对象</li>
+<li>顶层对象的属性与全局变量相关，被认为是js语言中最大的设计败笔之一<ol>
+<li>无法在编译时就提示变量未声明的错误，只有运行时才能知道（因为全局变量可能是顶层对象的属性创造的，而属性的创造是动态的）</li>
+<li>程序员很容易不知不觉的创建全局变量</li>
+<li>顶层对象的属性是到处都可以读写，这种方式非常不利于模块化编程</li>
+<li>window对象有实体含义，指的是浏览器的窗口对象</li>
+</ol>
+</li>
+<li>ES6开始，全局变量将逐步域顶层对象的属性隔离</li>
+<li>ES5的顶层对象本身也是一个问题，因为在各种实现中是不统一的</li>
+</ul>
+<h2 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h2><ul>
+<li>块级作用域可以多层嵌套</li>
+<li>ES5中只有全局作用域和函数作用域，ES6新增了块级作用域，解决了ES中很多不合理的场景</li>
+<li><p>不合理的场景</p>
+<ol>
+<li><p>由于变量的提升，导致内部的变量覆盖了外部的变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(time);</div><div class="line">	<span class="keyword">if</span> (<span class="literal">false</span>) &#123;</div><div class="line">		<span class="keyword">var</span> time = <span class="string">'hello world~'</span>; <span class="comment">// time 变量声明提升</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">f(); <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>常见的for循环变量泄漏全局变量</p>
+</li>
+</ol>
+</li>
+<li><p>块级作用域的出现，使得IIFE立即执行匿名函数不在是必要的了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// IIFE</span></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> a = <span class="string">'hello world'</span>;</div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="comment">// 块级作用域</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">let</span> a = <span class="string">'hello world'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数声明的位置<br>ES5规定，函数只能在顶层作用域和函数作用域中进行声明。但是，浏览器没有遵守这个规定，所以ES5中在块级作用域中声明函数，是可以正常运行，不会报错。</p>
+<ol>
+<li>顶层作用域（ES5、ES6）</li>
+<li>函数作用域（ES5、ES6）</li>
+<li>块级作用域（ES6）</li>
+</ol>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracylyx.github.io/我需要给站点做SEO.html" data-id="cj8yj2e65000ql8ujuit3c8pr" class="article-share-link">Share</a>
+      <a data-url="http://tracylyx.github.io/【笔记】let和const命令.html" data-id="cj8yj2e5y000jl8ujmmtoriig" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6标准入门（第三版）/">ES6标准入门（第三版）</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/const/">const</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/let/">let</a></li></ul>
 
     </footer>
   </div>
@@ -109,19 +163,10 @@
     
 <nav id="article-nav">
   
-    <a href="/【笔记】let和const命令.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          【笔记】let和const命令
-        
-      </div>
-    </a>
   
-  
-    <a href="/开发过程中遇到的坑坑洼洼.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/我需要给站点做SEO.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">开发过程中遇到的坑坑洼洼</div>
+      <div class="article-nav-title">我需要给站点做SEO</div>
     </a>
   
 </nav>
