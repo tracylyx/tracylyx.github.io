@@ -3,14 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | tracy木子</title>
+  <title>input使用坑之小结 | tracy木子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tracy木子">
-<meta property="og:url" content="http://tracylyx.github.io/archives/page/2/index.html">
+  <meta name="description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
+<meta property="og:type" content="article">
+<meta property="og:title" content="input使用坑之小结">
+<meta property="og:url" content="http://tracylyx.github.io/input使用坑之小结/index.html">
 <meta property="og:site_name" content="tracy木子">
+<meta property="og:description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
+<meta property="og:updated_time" content="2017-08-07T13:12:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracy木子">
+<meta name="twitter:title" content="input使用坑之小结">
+<meta name="twitter:description" content="最近在项目中使用一个标签，input。
+小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。
+举个例子：
+jq 或者 zepto 前提下
+1&amp;lt;input id=&quot;inputBox&quot; type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;请把光标聚焦到我...&quot;&amp;gt;
+12$(&apos;#inputBox&apos;).focus(); // 告诉你，无效！！！！$(&apos;input&apos;)[0].">
   
     <link rel="alternate" href="/atom.xml" title="tracy木子" type="application/atom+xml">
   
@@ -63,130 +82,70 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-react">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/React Native布局/" class="archive-article-date">
-  <time datetime="2017-04-06T07:24:39.000Z" itemprop="datePublished">Apr 6</time>
+        <section id="main"><article id="post-input使用坑之小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/input使用坑之小结/" class="article-date">
+  <time datetime="2017-08-07T13:05:25.000Z" itemprop="datePublished">2017-08-07</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/React Native布局/">React Native布局</a>
+    <h1 class="article-title" itemprop="name">
+      input使用坑之小结
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在项目中使用一个标签，input。</p>
+<p>小小一个标签，平时知道他是干嘛用的，然后，居然问题挺多。</p>
+<p>举个例子：</p>
+<p>jq 或者 zepto 前提下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inputBox"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">placeholder</span>=<span class="string">"请把光标聚焦到我..."</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#inputBox'</span>).focus(); <span class="comment">// 告诉你，无效！！！！</span></div><div class="line">$(<span class="string">'input'</span>)[<span class="number">0</span>].focus(); <span class="comment">// 正常聚焦到此input身上</span></div></pre></td></tr></table></figure>
+<p>丫丫的，真是傲娇啊！折腾了我一个晚上。算了，怪我太弱……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracylyx.github.io/input使用坑之小结/" data-id="cj8ydt368000nbnuj1il7grs0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/踩过的坑/">踩过的坑</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/UML类图相关基础知识点/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UML类图相关基础知识点
+        
+      </div>
+    </a>
+  
+  
+    <a href="/冒冒失失/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">冒冒失失</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/如何将md文件保存为PDF/" class="archive-article-date">
-  <time datetime="2016-12-29T15:26:32.000Z" itemprop="datePublished">Dec 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/如何将md文件保存为PDF/">md文件和PDF</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/canvas学习笔记/" class="archive-article-date">
-  <time datetime="2016-12-22T09:59:59.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/canvas学习笔记/">canvas学习笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/JavaScript中的错误处理/" class="archive-article-date">
-  <time datetime="2016-12-03T06:04:08.000Z" itemprop="datePublished">Dec 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/JavaScript中的错误处理/">JavaScript中的错误处理</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/使用hexo搭建博客简单教程/" class="archive-article-date">
-  <time datetime="2016-11-26T14:25:44.000Z" itemprop="datePublished">Nov 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/使用hexo搭建博客简单教程/">使用hexo搭建博客简单教程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/archives/">&laquo; __('prev')</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
 </section>
         
           <aside id="sidebar">
